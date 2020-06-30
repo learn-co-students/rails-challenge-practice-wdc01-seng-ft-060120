@@ -1,0 +1,9 @@
+<h1> Company Homepage </h1>
+
+<%= @company.name %><br>
+<% @company.offices.each do |office| %>
+    <%= office.floor %><br>
+    <%= office.building.name %><br>
+    <% end %>
+
+<%= link_to "Hire new employee", new_employee_path(@company.employee) %>

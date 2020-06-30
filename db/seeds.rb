@@ -66,6 +66,9 @@ end
 end
 
 =begin
+
+<%= link_to "Hire new employee", new_employee_path(@company.employee) %>
+
 Building -< Office >- Company -< Employee
 building has_many :offices
 building has_many :companies, through: :offices

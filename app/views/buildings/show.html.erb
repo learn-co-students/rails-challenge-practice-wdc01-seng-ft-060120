@@ -1,0 +1,12 @@
+<h1>BUILDING DETAILS:</h1>
+
+<%= @building.name %><br>
+<%= @building.country %><br>
+<%= @building.address %><br>
+
+<h3>List of companies located in this building:</h3>
+<ol>
+<% @building.companies.each do |company| %>
+<li><%= company.name %></li>
+<% end %>
+</ol>

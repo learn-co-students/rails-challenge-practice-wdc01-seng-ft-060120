@@ -64,3 +64,22 @@ end
     floor: random_building_floors_array.delete(random_building_floors_array.sample)
   )
 end
+
+=begin
+Building -< Office >- Company -< Employee
+building has_many :offices
+building has_many :companies, through: :offices
+
+office belongs_to :building
+office belongs_to :company
+
+company has_many :offices
+company has_many :employees
+company has_many :buildings, through: :offices
+
+employee belongs_to :company
+=end
+
+
+
+

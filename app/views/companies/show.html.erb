@@ -1,0 +1,23 @@
+<h1> Company Homepage </h1>
+
+<%= @company.name %><br>
+<% @company.offices.each do |office| %>
+    <%= office.floor %><br>
+    <%= office.building.name %><br>
+    <% end %>
+
+
+<h3>List of employees working here:</h3>
+<ol>
+<% @company.employees.each do |employee| %>
+    <li><%= employee.name %></li>
+    <li><%= link_to "Delete this employee", employee_path(employee), method: :delete %></li>
+<% end %>
+</ol>
+
+<h3>Total monthly rent paid by company:</h3>
+<% sum_arr = [] %>
+<% @company.buildings.each do |building| %>
+<% sum_arr << building.rent_per_floor %>
+<% end %>
+<h3>$ <%= sum_arr.sum %></h3>

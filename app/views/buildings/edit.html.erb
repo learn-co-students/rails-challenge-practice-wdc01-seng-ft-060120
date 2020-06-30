@@ -1,0 +1,17 @@
+<h1> Edit Buildings </h1>
+
+<%= form_for @building do |f| %>
+    <%= f.label :name, "Building Name" %>
+    <%= f.text_field :name %><br>
+    <%= f.label :country, "Country " %>
+    <%= f.text_field :country %><br>
+    <%= f.label :address, "Building Address" %>
+    <%= f.text_field :address %><br>
+    <%= f.label :rent_per_floor, "Rent per Floor" %>
+    <%= f.number_field :rent_per_floor %><br>
+    <%= f.label :number_of_floors, "Number of Floors" %>
+    <%= f.number_field :number_of_floors %><br>
+
+    <%= f.submit "Submit Changes" %>
+
+    <% end %>

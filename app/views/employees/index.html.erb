@@ -1,0 +1,13 @@
+<h1> List of Employees </h1>
+
+<% if @employee.errors.any? %>
+<% @employees.errors.full_messages.each do |message| %>
+<%= message %>
+    <% end %>
+  <% end %>
+
+<ol>
+<% @employees.each do |employee| %>
+    <li><%= link_to employee.name, employee_path(employee) %></li>
+    <% end %>
+    </ol>

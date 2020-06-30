@@ -1,6 +1,10 @@
 class EmployeesController < ApplicationController
 
-    before_action :find_employee, only: [:show, :create, :edit, :update, :destroy]
+    before_action :find_employee, only: [:show, :edit, :update, :destroy]
+
+    def index
+        @employees = Employee.all 
+    end
 
     def show
         #find_employee

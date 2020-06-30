@@ -1,0 +1,7 @@
+<h1> Employee Homepage </h1>
+<% if @employee.errors.any? %>
+<% @employees.errors.full_messages.each do |message| %>
+<%= message %>
+    <% end %>
+  <% end %>
+<%= @employee.name %><br>

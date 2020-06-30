@@ -1,5 +1,10 @@
-<h1> Create Employee </h1>
+<p>Employee Details</p>
+    <%= form_for @employee do |f| %>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+    <%= f.label :title %>
+	<%= f.text_field :title %>
+    <%= f.collection_select:company_id, Company.all, :id, :name %>
+    <%= f.submit %>
 
-<%= render 'form', employee: @employee %>
-
-<%= link_to 'Back', employees_path %>
+    <% end %>

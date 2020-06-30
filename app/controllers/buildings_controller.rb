@@ -20,7 +20,7 @@ class BuildingsController < ApplicationController
     private
 
     def building_params
-        @building.require(:building).permit(:name, :country, :address, :rent_per_floor, :number_of_floors)
+        params.require(:building).permit(:name, :country, :address, :rent_per_floor, :number_of_floors)
     end
 
     def find_building

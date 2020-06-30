@@ -10,3 +10,8 @@
 <li><%= company.name %></li>
 <% end %>
 </ol>
+
+<h1> Total rents </h1>
+<%= @building.monthly_rent %><br>
+
+<%= link_to "Edit this building", edit_building_path(@building) %>
